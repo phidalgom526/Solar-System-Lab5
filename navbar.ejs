@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Solar System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#planetMenu" aria-controls="planetMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="planetMenu">
+            <ul class="navbar-nav">
+                <% planets.forEach(function(planetName) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/planetInfo?planet=<%= encodeURIComponent(planetName) %>"><%= planetName %></a>
+                    </li>
+                <% }); %>
+                <li class="nav-item"><a class="nav-link" href="/asteroids">Asteroids</a></li>
+                <li class="nav-item"><a class="nav-link" href="/comets">Comets</a></li>
+                <li class="nav-item"><a class="nav-link" href="/nasa-pod">NASA POD</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
