@@ -1,0 +1,15 @@
+{
+  "name": "solar-system-express",
+  "version": "1.0.0",
+  "description": "Beginner Express and EJS Solar System lab",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "ejs": "^7.0.1",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "npm-solarsystem": "^1.1.5"
+  }
+}
