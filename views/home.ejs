@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { pageTitle: 'The Solar System' }) %>
+<body>
+    <%- include('partials/navbar', { planets }) %>
+
+    <main class="container py-4">
+        <h1>Explore the Solar System</h1>
+        <p>Choose a planet from the navigation menu or explore the other space pages.</p>
+
+        <% if (imageError) { %>
+            <p class="alert alert-warning">could not request random images. Please try again.</p>
+        <% } else { %>
+            <div class="row g-4">
+                <% for (let i = 0; i < images.length; i++) { %>
+                    <div class="col-12 col-sm-6">
+                        <img src="<%= images[i] %>" alt="Random picture of space" class="space-image">
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

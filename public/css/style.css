@@ -1,0 +1,43 @@
+body {
+    background-color: #101827;
+    color: #f4f6fb;
+    font-family: Arial, sans-serif;
+}
+
+main h1 {
+    margin-bottom: 1rem;
+    color: #a8d8ff;
+}
+
+.space-image,
+.planet-image {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+footer {
+    background-color: #080d16;
+    color: #f4f6fb;
+}
+
+.csumb-logo {
+    width: 150px;
+    max-width: 80%;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: #a8d8ff;
+}
+
+.navbar .nav-link {
+    color: #f4f6fb;
+}
+
+.navbar .nav-link:hover {
+    color: #a8d8ff;
+}
