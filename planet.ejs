@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { pageTitle: name }) %>
+<body>
+    <%- include('partials/navbar', { planets }) %>
+
+    <main class="container py-4">
+        <h1><%= name %></h1>
+        <div class="row g-4 align-items-start">
+            <div class="col-12 col-md-6">
+                <img src="<%= planet.image %>" alt="Picture of <%= name %>" class="planet-image">
+            </div>
+            <div class="col-12 col-md-6">
+                <% Object.keys(planet).forEach(function(property) { %>
+                    <% if (property !== 'image' && property !== 'websiteLink') { %>
+                        <p><strong><%= property.replace(/([A-Z])/g, ' $1') %>:</strong> <%= planet[property] %></p>
+                    <% } %>
+                <% }); %>
+                <% if (planet.websiteLink) { %>
+                    <p><strong>Website:</strong> <a href="<%= planet.websiteLink %>" target="_blank" rel="noopener">Learn more from NASA</a></p>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
